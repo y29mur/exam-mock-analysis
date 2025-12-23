@@ -40,3 +40,14 @@ I trained a Logistic Regression model to flag students at risk of failing (<50%)
 * `data_generator.py`: Python script used to create the synthetic dataset with realistic statistical distributions (Gaussian noise injected).
 * `analysis_notebook.ipynb`: The end-to-end analysis, including A/B testing, regression, and classification.
 * `global_exam_data.csv`: The dataset used.
+
+## 🚀 How to Run
+If you want to reproduce this analysis on your own machine:
+
+1. **Clone this repository** (or download the files).
+2. **Install the required libraries**:
+   ```bash
+   pip install pandas scikit-learn seaborn matplotlib
+3. Run the analysis script:
+   python analysis_script.py
+   
