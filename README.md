@@ -1,11 +1,12 @@
-# exam-mock-analysis
-Analyse the impact of the use of mocks ahead of the real exam
-*************************************************************
+# Exam Mock Analysis
+Analyse the impact of the use of mocks ahead of the real exam.
+
+---
 
 # Global Exam Performance Analysis: A/B Testing & Predictive Modeling
 
 ## 📌 Executive Summary
-This project analyses a dataset of 1,000 students across 6 global locations to determine the drivers of exam success. 
+This project analyses a dataset of 1,000 students across 6 global locations to determine the drivers of exam success.
 
 **Key Business Question:** Does the optional "Mock Exam" actually improve student grades, or is it just a correlation?
 
@@ -34,11 +35,10 @@ I trained a Logistic Regression model to flag students at risk of failing (<50%)
 * **Overall Accuracy:** 71.5%
 * **Recall (Passes):** 98%
 * **Recall (Failures):** 11%
-* *Note:* The current model is conservative; it underestimates the number of failures. Future iterations would utilize **SMOTE (Synthetic Minority Over-sampling Technique)** to better balance the "Fail" class and catch more at-risk students.
 
 ## 📂 Project Structure
 * `data_generator.py`: Python script used to create the synthetic dataset with realistic statistical distributions (Gaussian noise injected).
-* `analysis_notebook.ipynb`: The end-to-end analysis, including A/B testing, regression, and classification.
+* `analysis_script.py`: The end-to-end analysis script containing the A/B Test (Project A), Linear Regression (Project B), and Classification (Project C).
 * `global_exam_data.csv`: The dataset used.
 
 ## 🚀 How to Run
@@ -48,20 +48,9 @@ If you want to reproduce this analysis on your own machine:
 2. **Install the required libraries**:
    ```bash
    pip install pandas scikit-learn seaborn matplotlib
-3. Run the analysis script:
-   python analysis_script.py
-4. Run your Git commands to upload it**
-
-Once you have saved that file:
-
-1.  **Open your terminal** (inside your project folder).
-2.  **Type these commands exactly**, pressing Enter after each one:
-
-   ```bash   
-   git add .
-
-git commit -m "Finalized README with correct formatting"
-
-git push
-```
-(If git push gives an error, try: git push -u origin main or git push -u origin master)
+   ```
+3. **Generate the data using the file**:
+```data_generator.py```
+4. **Run the analysis script where all three Projects are combined**:
+   ```analysis_script.py```
+* Select all or any project, note that you will need to preprocess data ahead of running machine learning projects.
