@@ -1,2 +1,42 @@
 # exam-mock-analysis
-analyse the impact of the use of mocks ahead of the real exam
+Analyse the impact of the use of mocks ahead of the real exam
+*************************************************************
+
+# Global Exam Performance Analysis: A/B Testing & Predictive Modeling
+
+## 📌 Executive Summary
+This project analyses a dataset of 1,000 students across 6 global locations to determine the drivers of exam success. 
+
+**Key Business Question:** Does the optional "Mock Exam" actually improve student grades, or is it just a correlation?
+
+Using **Linear Regression**, I isolated the impact of the mock exam and found it contributes a **+7.2 point increase** to the final score, controlling for degree status and attempt count. This suggests a strong causal link and ROI for the mock exam product.
+
+## 🛠 Tools & Technologies
+* **Python 3.9**
+* **Pandas & NumPy:** For data generation and manipulation.
+* **Scikit-Learn:** For Linear Regression and Logistic Classification.
+* **Seaborn:** For statistical visualization.
+* **Statistical Inference:** T-Tests and p-value assessment.
+
+## 📊 Key Insights
+
+### 1. The "Mock Exam" Effect (Linear Regression)
+I built a regression model to predict final scores based on student attributes.
+* **R-Squared:** 18% (Variance explained by the model).
+* **Mock Exam Impact:** **+7.19 points**.
+* **Degree Impact:** **+3.10 points**.
+* **Retake Penalty:** **-2.59 points** per additional attempt.
+
+> **Business Recommendation:** The data supports aggressive marketing of the Mock Exam, as it provides a quantifiable grade improvement distinct from the student's natural aptitude or education level.
+
+### 2. Failure Prediction (Classification)
+I trained a Logistic Regression model to flag students at risk of failing (<50%).
+* **Overall Accuracy:** 71.5%
+* **Recall (Passes):** 98%
+* **Recall (Failures):** 11%
+* *Note:* The current model is conservative; it underestimates the number of failures. Future iterations would utilize **SMOTE (Synthetic Minority Over-sampling Technique)** to better balance the "Fail" class and catch more at-risk students.
+
+## 📂 Project Structure
+* `data_generator.py`: Python script used to create the synthetic dataset with realistic statistical distributions (Gaussian noise injected).
+* `analysis_notebook.ipynb`: The end-to-end analysis, including A/B testing, regression, and classification.
+* `global_exam_data.csv`: The dataset used.
